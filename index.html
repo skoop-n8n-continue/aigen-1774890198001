@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parisian Cafe Menu</title>
+
+    <!-- Cache Busting Tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css?v=p4r1s">
+</head>
+<body>
+    <div class="digital-signage-container">
+
+        <!-- Menu 1: Hot Drinks -->
+        <section class="menu-slide active" id="slide-hot">
+            <div class="slide-image">
+                <img id="img-hot" src="" alt="Hot Coffee">
+            </div>
+            <div class="slide-content">
+                <div class="menu-header">
+                    <p class="subtitle">L'Art du Café</p>
+                    <h1 class="title">CHAUD</h1>
+                    <div class="divider"></div>
+                    <p class="description">Nos cafés et thés servis chauds</p>
+                </div>
+
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Espresso</span>
+                            <span class="dots"></span>
+                            <span class="item-price">3.00</span>
+                        </div>
+                        <p class="item-desc">Corsé et aromatique</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Café Allongé</span>
+                            <span class="dots"></span>
+                            <span class="item-price">3.50</span>
+                        </div>
+                        <p class="item-desc">Espresso adouci d'eau chaude</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Café Crème</span>
+                            <span class="dots"></span>
+                            <span class="item-price">4.50</span>
+                        </div>
+                        <p class="item-desc">Espresso, lait chaud monté en mousse</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Cappuccino</span>
+                            <span class="dots"></span>
+                            <span class="item-price">5.00</span>
+                        </div>
+                        <p class="item-desc">Espresso, lait chaud et mousse onctueuse</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Chocolat Chaud</span>
+                            <span class="dots"></span>
+                            <span class="item-price">5.50</span>
+                        </div>
+                        <p class="item-desc">Chocolat noir fondu, lait entier</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Thé Earl Grey</span>
+                            <span class="dots"></span>
+                            <span class="item-price">4.50</span>
+                        </div>
+                        <p class="item-desc">Thé noir parfumé à la bergamote</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Matcha Latté</span>
+                            <span class="dots"></span>
+                            <span class="item-price">6.00</span>
+                        </div>
+                        <p class="item-desc">Thé vert japonais fouetté, lait chaud</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu 2: Iced Drinks -->
+        <section class="menu-slide" id="slide-iced">
+            <div class="slide-image">
+                <img id="img-iced" src="" alt="Iced Drinks">
+            </div>
+            <div class="slide-content">
+                <div class="menu-header">
+                    <p class="subtitle">Rafraîchissements</p>
+                    <h1 class="title">FROID</h1>
+                    <div class="divider"></div>
+                    <p class="description">Nos créations glacées pour se désaltérer</p>
+                </div>
+
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Café Glacé</span>
+                            <span class="dots"></span>
+                            <span class="item-price">4.50</span>
+                        </div>
+                        <p class="item-desc">Espresso versé sur glace</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Latté Glacé</span>
+                            <span class="dots"></span>
+                            <span class="item-price">5.50</span>
+                        </div>
+                        <p class="item-desc">Espresso, lait froid, glaçons</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Cold Brew</span>
+                            <span class="dots"></span>
+                            <span class="item-price">5.00</span>
+                        </div>
+                        <p class="item-desc">Café infusé à froid pendant 18 heures</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Thé Noir Glacé</span>
+                            <span class="dots"></span>
+                            <span class="item-price">4.00</span>
+                        </div>
+                        <p class="item-desc">Infusion de thé noir, citron, servi glacé</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Thé Pêche Glacé</span>
+                            <span class="dots"></span>
+                            <span class="item-price">4.50</span>
+                        </div>
+                        <p class="item-desc">Thé noir glacé, sirop de pêche blanche</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Matcha Glacé</span>
+                            <span class="dots"></span>
+                            <span class="item-price">6.00</span>
+                        </div>
+                        <p class="item-desc">Thé vert matcha fouetté, lait froid, glace</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu 3: Pastries -->
+        <section class="menu-slide" id="slide-pastries">
+            <div class="slide-image">
+                <img id="img-pastries" src="" alt="Pastries">
+            </div>
+            <div class="slide-content">
+                <div class="menu-header">
+                    <p class="subtitle">Gourmandises</p>
+                    <h1 class="title">PÂTISSERIES</h1>
+                    <div class="divider"></div>
+                    <p class="description">Nos douceurs artisanales du jour</p>
+                </div>
+
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Croissant au Beurre</span>
+                            <span class="dots"></span>
+                            <span class="item-price">3.50</span>
+                        </div>
+                        <p class="item-desc">Pur beurre AOP, croustillant et alvéolé</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Pain au Chocolat</span>
+                            <span class="dots"></span>
+                            <span class="item-price">4.00</span>
+                        </div>
+                        <p class="item-desc">Pâte feuilletée, deux barres de chocolat noir</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Macaron Assorti</span>
+                            <span class="dots"></span>
+                            <span class="item-price">2.50</span>
+                        </div>
+                        <p class="item-desc">Vanille, Chocolat, Pistache ou Framboise</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Tarte au Citron</span>
+                            <span class="dots"></span>
+                            <span class="item-price">6.00</span>
+                        </div>
+                        <p class="item-desc">Pâte sablée, crème au citron jaune et vert</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Éclair au Café</span>
+                            <span class="dots"></span>
+                            <span class="item-price">5.50</span>
+                        </div>
+                        <p class="item-desc">Pâte à choux, crème pâtissière au café arabica</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-name">Madeleine</span>
+                            <span class="dots"></span>
+                            <span class="item-price">2.00</span>
+                        </div>
+                        <p class="item-desc">Gâteau moelleux parfumé à la fleur d'oranger</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-dot active" data-index="0"></div>
+            <div class="progress-dot" data-index="1"></div>
+            <div class="progress-dot" data-index="2"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js?v=p4r1s"></script>
+</body>
+</html>
