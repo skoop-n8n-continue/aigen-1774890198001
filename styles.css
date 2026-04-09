@@ -6,12 +6,12 @@
 }
 
 :root {
-    /* Parisian Neutral Color Palette */
-    --bg-color: #F9F8F6; /* Alabaster / Cream */
-    --text-primary: #2C2A29; /* Charcoal */
-    --text-secondary: #5D5A56; /* Soft Dark Grey */
-    --accent-color: #A89F91; /* Warm Taupe / Grey */
-    --divider-color: #E2DDD6; /* Light Taupe */
+    /* Parisian Neutral Color Palette - Enhanced Contrast */
+    --bg-color: #FAF9F7; /* Slightly brighter cream for cleaner look */
+    --text-primary: #1C1B1A; /* Darker charcoal for better readability */
+    --text-secondary: #484440; /* Darker grey for body text (WCAG AA compliant) */
+    --accent-color: #7D6E5C; /* Darker Taupe (Passes 4.5:1 on cream) */
+    --divider-color: #CFC9C0; /* Slightly more visible taupe */
 
     /* Fonts */
     --font-heading: 'Playfair Display', serif;
@@ -22,8 +22,11 @@ body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-body);
-    width: 1920px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1000px; /* Prevent too much squishing on very narrow screens */
+    min-height: 562px; /* Maintain minimum 16:9-ish aspect ratio */
+    margin: 0;
     overflow: hidden; /* Hide scrollbars for digital signage */
     position: relative;
     -webkit-font-smoothing: antialiased;
@@ -34,6 +37,8 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    display: flex;
+    overflow: hidden;
 }
 
 /* Slide Layout */
@@ -56,7 +61,7 @@ body {
 
 /* Image Section */
 .slide-image {
-    width: 800px;
+    width: 42%; /* Responsive width */
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -67,7 +72,7 @@ body {
     height: 100%;
     object-fit: cover;
     /* Subtle zoom effect for the image when active */
-    transform: scale(1.05);
+    transform: scale(1.08);
     transition: transform 12s ease-out;
 }
 
@@ -78,7 +83,7 @@ body {
 /* Content Section */
 .slide-content {
     flex: 1;
-    padding: 100px 120px;
+    padding: clamp(40px, 6vh, 100px) clamp(40px, 6vw, 120px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +92,7 @@ body {
 /* Header Styles */
 .menu-header {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: clamp(30px, 5vh, 70px);
     opacity: 0;
     transform: translateY(20px);
     transition: all 1s ease-out 0.5s; /* Delay to let slide fade in first */
@@ -101,7 +106,7 @@ body {
 .subtitle {
     font-family: var(--font-heading);
     font-style: italic;
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 1.8vw, 1.8rem);
     color: var(--accent-color);
     letter-spacing: 0.05em;
     margin-bottom: 15px;
@@ -109,12 +114,12 @@ body {
 
 .title {
     font-family: var(--font-heading);
-    font-size: 5.5rem;
+    font-size: clamp(3rem, 5.5vw, 5.5rem);
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--text-primary);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .divider {
@@ -125,19 +130,19 @@ body {
 }
 
 .description {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
     color: var(--text-secondary);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400; /* Increased weight for better contrast */
 }
 
 /* Menu Items Styles */
 .menu-items {
     display: flex;
     flex-direction: column;
-    gap: 45px;
-    max-width: 800px;
+    gap: clamp(20px, 3vh, 45px);
+    max-width: 900px;
     margin: 0 auto;
     width: 100%;
 }
@@ -160,12 +165,12 @@ body {
 .item-info {
     display: flex;
     align-items: baseline;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .item-name {
     font-family: var(--font-heading);
-    font-size: 2.2rem;
+    font-size: clamp(1.4rem, 2.2vw, 2.2rem);
     font-weight: 500;
     color: var(--text-primary);
     letter-spacing: 0.02em;
@@ -174,22 +179,22 @@ body {
 .dots {
     flex-grow: 1;
     border-bottom: 2px dotted var(--divider-color);
-    margin: 0 20px;
+    margin: 0 15px;
     position: relative;
-    top: -8px;
+    top: -6px;
 }
 
 .item-price {
     font-family: var(--font-body);
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+    font-weight: 500; /* Increased weight */
     color: var(--text-primary);
 }
 
 .item-desc {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
     color: var(--text-secondary);
-    font-weight: 300;
+    font-weight: 400; /* Increased weight for readability */
     font-style: italic;
     letter-spacing: 0.03em;
 }
@@ -197,8 +202,8 @@ body {
 /* Progress Indicator */
 .progress-container {
     position: absolute;
-    bottom: 50px;
-    right: 560px; /* Centered relative to the content area (1120px width) */
+    bottom: 40px;
+    right: 29%; /* Adjusted for responsive layout */
     transform: translateX(50%);
     display: flex;
     gap: 15px;
@@ -218,4 +223,32 @@ body {
     background-color: var(--text-primary);
     border-color: var(--text-primary);
     transform: scale(1.2);
+}
+
+/* Tablet / Small Screen Adjustment */
+@media (max-width: 1200px) {
+    .slide-image {
+        width: 35%;
+    }
+    .progress-container {
+        right: 32.5%;
+    }
+}
+
+/* Vertical / Portrait Orientation Support (Just in case) */
+@media (max-aspect-ratio: 1/1) {
+    .menu-slide {
+        flex-direction: column;
+    }
+    .slide-image {
+        width: 100%;
+        height: 35%;
+    }
+    .slide-content {
+        padding: 40px;
+    }
+    .progress-container {
+        right: 50%;
+        bottom: 20px;
+    }
 }
